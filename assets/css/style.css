@@ -1,0 +1,684 @@
+/*
+   Theme Name : Start Bootstrap
+   Theme Description : learnning html, css
+   Author : グエン・フイ・ホアン
+   Version : 1.0.0
+
+ ============================= Table Of Content  =============================
+ 1, Setting
+    1a, under star
+    1b, Modal
+    1c, Back to top 
+ 2, Header
+ 3, Banner
+ 4, About
+ 5, portfolio
+ 6, About
+ 7, Contact
+ 8.Copy right
+*/
+
+
+/* ============================= 1, Setting  ============================= */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ :root {
+    --purple: #2c3e50;
+    --white: #ffffff;
+    --bg-green: #1abc9c;
+    --font-lato: 'Lato', sans-serif;
+    --dark: #212529;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-lato);
+    font-weight: 700;
+    /* font-family: sans-serif; */
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+    /* width: 100%; */
+    margin: auto;
+    padding: 0 15px;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    margin-bottom: 0.5rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+
+/* ================= 1a, under   ================= */
+
+.understar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+    font-size: 32px;
+}
+
+.understar .understar-line {
+    width: 7rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+}
+
+@media screen and (max-width:719px) {
+    .understar .understar-line {
+        width: 112px;
+    }
+    .title {
+        font-size: 36px !important;
+    }
+}
+
+.understar .understar-star {
+    margin: 0px 10px;
+}
+
+.background-dark {
+    background-color: var(--dark);
+}
+
+.color-dark {
+    color: var(--dark);
+}
+
+.background-white {
+    background: var(--white);
+}
+
+.background-green {
+    background: var(--bg-green);
+}
+
+.color-white {
+    color: var(--white);
+}
+
+.background-purple {
+    background-color: var(--purple);
+}
+
+.color-purple {
+    color: var(--purple);
+}
+
+.padding-5 {
+    padding: 5px 0px;
+    transition: 0.15s padding ease-out, 0.15s margin ease-out, 0.15s border ease-out;
+}
+
+
+/* ================= 1b, Modal  ================= */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    outline: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: scroll;
+    transition: visibility 0s, opacity 0.5s linear;
+    z-index: 3;
+}
+
+.modal-show {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s, opacity 0.5s linear;
+}
+
+.modal .modal-form {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.modal .modal-form .modal-content {
+    background-color: var(--white);
+    border-radius: 10px;
+}
+
+.modal .modal-content .modal-content {
+    background-color: var(--white);
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    z-index: 1;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 80px;
+    line-height: 40px;
+    color: #1abc9c;
+    opacity: 1;
+    background-color: var(--white);
+    border: none;
+    outline: none;
+}
+
+.modal .modal-content .close:hover {
+    opacity: 0.75;
+}
+
+.modal .modal-content .modal_content-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px;
+}
+
+.modal .modal-content .modal_content-form .modal__title-text {
+    font-size: 48px;
+}
+
+.modal .modal-content .modal_content-form .modal__title_img img {
+    padding: 30px 0px;
+    border-radius: 8px;
+}
+
+.modal .modal-content .modal_content-form .modal-title-discuss {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: var(--font-lato);
+    text-align: center;
+    padding: 15px 0px 30px 0px;
+}
+
+.modal .modal-content .modal_content-form .modal-title-discuss p {
+    padding: 15px;
+}
+
+.modal .modal-content .modal-footer .modal-footer-close {
+    color: #fff;
+    background-color: #1abc9c;
+    border-color: #1abc9c;
+    outline: none;
+    opacity: 1;
+}
+
+.modal .modal-content .modal-footer span {
+    font-size: 22px;
+}
+
+.modal .modal-content .modal-footer .modal-footer-close:hover {
+    opacity: 0.6;
+}
+
+
+/* ================= 1c, Back to top ================= */
+
+@media screen and (max-width:720px) {
+    .back-top-top {
+        background-color: rgba(33, 37, 41, 0.5);
+        position: fixed;
+        bottom: 16px;
+        right: 32px;
+        transition: all .4s;
+        font-size: 1.6rem;
+        opacity: 0;
+        border-radius: 8px;
+        z-index: 1000;
+    }
+    .back-top-top a {
+        width: auto;
+        padding: 15px 16px;
+        line-height: 50px;
+        text-align: center;
+        color: var(--white);
+    }
+}
+
+.display-opacity {
+    opacity: 1;
+}
+
+
+/* ============================= 2, Header  ============================= */
+
+.overflow-hiden {
+    overflow: hidden;
+}
+
+.header {
+    z-index: 2;
+    width: 100%;
+    position: fixed;
+    background-color: var(--purple);
+    /* padding: 24px 0px; */
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.header .header__menu {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 0px;
+}
+
+.header .header__menu .header__menu-logo {
+    font-size: 28px;
+    line-height: 30px;
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header .header__menu .header__menu-bar {
+    background-color: var(--bg-green);
+    border-radius: 8px;
+    font-size: 12.8px;
+    padding: 12.8px;
+    outline-style: none;
+    font-weight: 700;
+    color: var(--white);
+    border: none;
+}
+
+.header .header__menu .header__menu-list {
+    display: flex;
+    flex-basis: auto;
+}
+
+.header .header__menu .header__menu-list .list__item {
+    padding: 20px 16px;
+}
+
+.header .header__menu .header__menu-list .list__item a {
+    color: var(--white);
+}
+
+.header .header__menu .header__menu-list .list__item:not(.selected) a:hover {
+    color: var(--bg-green);
+}
+
+@media screen and (min-width:720px) {
+    .header .header__menu .header__menu-bar {
+        display: none;
+    }
+    .header .header__menu {
+        padding: 15px 0px;
+        transition: 0.5s;
+    }
+    .header .padding-0 {
+        padding: 10px;
+    }
+    .header .header__menu .header__menu-list .selected {
+        background-color: var(--bg-green);
+        border-radius: 8px;
+    }
+}
+
+@media screen and (max-width:720px) {
+    .header .header__menu .header__menu-logo {
+        font-size: 20px;
+    }
+    .header .header__menu .header__menu-logo {
+        width: 60%;
+    }
+    .header .header__menu .header__menu-list {
+        max-height: 0;
+        display: flex;
+        flex-wrap: wrap;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    .header .header__menu .header__menu-list .list__item {
+        padding: 25px 16px;
+        width: 100%;
+    }
+    .header .header__menu .header__menu-list .list__item {
+        color: var(--white);
+        padding: 0px;
+        line-height: 50px;
+    }
+}
+
+.show {
+    max-height: 100vh !important;
+}
+
+.header .header__menu .header__menu-list__show {
+    max-height: 200px;
+    transition: 1s;
+}
+
+
+/* ============================= 3, Banner  ============================= */
+
+.banner {
+    background-color: var(--bg-green);
+    padding: 200px 0px 100px 0px;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.banner-content .banner__avatar {
+    width: 220px;
+    height: 220px;
+}
+
+.banner-content .banner__avatar .banner__avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.banner-content .banner__menu-logo {
+    color: var(--white);
+    font-size: 44px;
+    padding-top: 40px;
+}
+
+.banner-content .banner__intro {
+    color: var(--white);
+    font-size: 20px;
+}
+
+
+/* ============================= 5, portfolio  ============================= */
+
+.portfoio {
+    padding: 96px 0px;
+}
+
+.portfoio .portfoio__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.portfoio .portfoio__content .portfoio-content-header {
+    font-size: 48px;
+    color: var(--purple);
+}
+
+.portfoio .portfoio__box {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.portfoio .portfoio__box .portfoio__box__btn {
+    font-size: 24px;
+    position: absolute;
+    width: 100%;
+    max-width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    background-color: rgba(26, 188, 156, 0.9);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.portfoio .portfoio__box:hover .portfoio__box__btn {
+    opacity: 1;
+}
+
+.portfoio .portfoio__box .portfoio__box-img {
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+
+/* ============================= 6, About  ============================= */
+
+.about {
+    background-color: var(--bg-green);
+    padding: 100px 0px;
+}
+
+.about .about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.about .about__content .about__content__header {
+    font-size: 48px;
+    color: var(--white);
+}
+
+.about .about__content .about__content__text {
+    color: var(--white);
+    padding: 15px;
+    font-size: 20px;
+    text-align: left;
+    word-break: break-word;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 0.125rem solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: color 0.15s;
+    font-size: 20px;
+}
+
+.about .about__content__download {
+    padding-top: 30px;
+}
+
+.about .about__content__download--download-btn {
+    width: auto;
+    border-color: var(--white);
+    color: var(--white);
+    font-size: 20px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+.about .about__content__download--download-btn:hover {
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+
+/* ============================= 7, Contact  ============================= */
+
+.contact {
+    padding: 100px 0px;
+}
+
+.contact .contact__content {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .contact__content .contact__title-text {
+    font-size: 48px;
+}
+
+.contact .contact__content .contact__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact__form .contact__form-group {
+    border-bottom: 1px solid #e9ecef;
+}
+
+.contact .contact__form .contact__form-group .contact__form-group-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.contact .contact__form .contact__form-group .contact__form-group-item .label {
+    color: var(--bg-green);
+    font-size: 13.6px;
+    opacity: 0;
+}
+
+.contact .contact__form .contact__form-group .contact__form-group-item .form-control {
+    border: none;
+    outline: none;
+    font-size: 24px;
+    line-height: 36px;
+    width: 100%;
+    font-family: var(--font-lato);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.contact .contact__form .contact__form-group-submit {
+    /* border-bottom: 1px solid #e9ecef; */
+    margin-top: 15px;
+}
+
+.contact .contact__form .contact__form-group-submit .contact__form-btn {
+    width: auto;
+    color: var(--white);
+    background-color: var(--bg-green);
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.contact .contact__form .contact__form-group-submit .contact__form-btn:hover {
+    color: #fff;
+    background-color: #159a80;
+    border-color: #148f77;
+}
+
+
+/* ============================= 6, Footer  ============================= */
+
+.footer {
+    color: var(--white);
+    background-color: var(--purple);
+    padding: 80px 0px;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 24px;
+}
+
+.footer p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.footer__content__about .footer__content__about-home {
+    color: var(--bg-green);
+}
+
+.footer__content__about .footer__content__about-home:hover {
+    color: #117964;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer .footer__content__share .footer__content__share__form {
+    display: flex;
+    justify-content: center;
+}
+
+.footer .footer__content__share .footer__content__share__form .footer__content__share-icon {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 2px var(--white) solid;
+    border-radius: 50%;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.footer .footer__content__share .footer__content__share__form .footer__content__share-icon:hover {
+    color: var(--dark);
+    background-color: var(--white);
+}
+
+.footer .footer__selecter {
+    margin-top: 45px;
+}
+
+
+/* =====================8.Copy right =====================*/
+
+.copyright .copyright-content {
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    background-color: #1a252f;
+    font-size: 16px;
+    padding: 24px 0px;
+    font-family: var(--font-lato);
+    font-weight: 400;
+}
